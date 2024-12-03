@@ -1,0 +1,62 @@
+Install Python
+Ensure Python is installed on your system. If not:
+
+Download it from python.org.
+Install the latest version (3.8 or higher recommended).
+During installation, ensure you check the option to "Add Python to PATH."
+2. Install Required Libraries
+Run the following command in your terminal or command prompt to install the libraries used in the chatbot:
+
+bash
+Copy code
+pip install nltk requests textblob wolframalpha
+nltk: For natural language processing.
+requests: To make API calls.
+textblob: For sentiment analysis.
+wolframalpha: For factual query handling.
+3. Download NLTK Data
+Run the following commands in Python to download the necessary nltk data:
+
+python
+Copy code
+import nltk
+nltk.download('punkt')
+4. Set Up API Keys
+The chatbot uses two external APIs:
+
+OpenWeatherMap: For weather information.
+Sign up at OpenWeatherMap.
+Get your API key from the dashboard.
+WolframAlpha: For factual queries.
+Sign up at WolframAlpha.
+Get your API key from the developer portal.
+Replace the placeholders in the code with your actual API keys:
+
+python
+Copy code
+WOLFRAM_API_KEY = "your_wolfram_api_key"
+WEATHER_API_KEY = "your_openweathermap_api_key"
+5. Save the Code
+Save the chatbot code in a file with a .py extension, e.g., chatbot.py.
+
+6. Run the Chatbot
+Open a terminal or command prompt in the directory where the chatbot.py file is saved, then run:
+
+bash
+Copy code
+python chatbot.py
+7. Interact with the Chatbot
+Once the chatbot starts, you'll see a greeting message. Start chatting with it by typing your queries or commands, such as:
+
+"Hello!"
+"What is the weather in New York?"
+"Add task Finish homework."
+"View tasks."
+"Delete task Finish homework."
+"Tell me a joke."
+"What is 2+2?" (factual query using WolframAlpha)
+Type quit to exit the chatbot.
+
+8. Test Persistent To-Do List
+Add tasks, then exit the chatbot by typing quit.
+Restart the chatbot and type view tasks. You should see the tasks saved from the previous session.
